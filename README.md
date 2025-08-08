@@ -21,15 +21,34 @@ Este proyecto es una Single Page Application (SPA) de e-commerce desarrollada co
 - Registro de órdenes de compra en Firestore, mostrando al usuario el ID de la orden generada.  
 - Renderizados condicionales para estados de carga, carrito vacío y productos sin stock.  
 - Validaciones en el formulario de checkout para asegurar datos correctos.  
+- Apartado sencillo de contacto para comunicación con el sitio. 
 
 ## Estructura de componentes
 
 - `App`  
-- `NavBar`  
+- `NavBar` 
+- `Buttons` 
 - `ItemListContainer` con `Item`
 - `ItemDetailContainer` con `ItemCount`  
 - `Cart`  
 - `CheckoutForm`  
+- `Contact`
+
+## Cómo ejecutar el proyecto localmente
+
+Sigue estos pasos para clonar, instalar y correr la aplicación en tu máquina:  
+
+1. Clonar el repositorio:
+    git clone https://github.com/FrancoCarranza/ProyectoFinalCarranza.git
+2. Entra a la carpeta del proyecto:
+    cd ProyectoFinalCarranza
+3. Instala las dependencias:
+    npm install
+4. Ejecuta la aplicación en modo desarrollo:
+    npm start  <!-- o npm run dev si usás Vite -->
+5. Abrir en el navegador la URL:
+    http://localhost:3000
+
 
 ## Consideraciones finales
 
