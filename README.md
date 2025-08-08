@@ -25,10 +25,10 @@ Este proyecto es una Single Page Application (SPA) de e-commerce desarrollada co
 ## Estructura de componentes
 
 - `App`  
-- `NavBar` con `CartWidget`  
-- `ItemListContainer` con `ItemList` y `Item`  
-- `ItemDetailContainer` con `ItemDetail` y `ItemCount`  
-- `Cart` con `CartItem`  
+- `NavBar`  
+- `ItemListContainer` con `Item`
+- `ItemDetailContainer` con `ItemCount`  
+- `Cart`  
 - `CheckoutForm`  
 
 ## Consideraciones finales
