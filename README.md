@@ -45,7 +45,7 @@ Sigue estos pasos para clonar, instalar y correr la aplicación en tu máquina:
 3. Instala las dependencias:
     npm install
 4. Ejecuta la aplicación en modo desarrollo:
-    npm start  <!-- o npm run dev si usás Vite -->
+    npm start  o npm run dev si usás Vite 
 5. Abrir en el navegador la URL:
     http://localhost:3000
 
