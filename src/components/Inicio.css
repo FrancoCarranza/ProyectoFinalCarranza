@@ -1,0 +1,16 @@
+.inicio{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
+.inicio .titulo{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.inicio .texto{
+    font-size: 30px;
+}

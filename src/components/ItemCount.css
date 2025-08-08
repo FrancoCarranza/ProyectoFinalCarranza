@@ -1,0 +1,41 @@
+.item-count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.item-count .unidades{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.item-count .botones-compra{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-count .botones-compra .boton{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 30px;
+    height: 40px;
+    font-size: 25px;
+    color: black;
+}
+
+.item-count .botones-compra .boton:hover{
+    font-size: 27px;
+}
+
+.item-count .botones-compra .contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 32px;
+    font-size: 25px;
+}

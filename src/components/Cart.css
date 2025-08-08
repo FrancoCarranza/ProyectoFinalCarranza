@@ -1,0 +1,147 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-height: calc(100vh - 80px);
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+}
+
+
+.titulo-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.vacio-cart{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 28px;
+}
+
+.contenedor-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.producto-cart{
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 140px;
+    /* border: 1px solid rgb(36, 35, 35);
+    border-radius: 10px; */
+}
+
+.info-product{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.titulo-product{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.precio-product{
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.unidades-product .total-product{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.boton-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-boton{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton-boton:hover{
+    background-color: black;
+    color: blue;
+}
+
+.botones-derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.total-cart{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.comprar-cart{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.comprar-cart:hover{
+    background-color: darkblue;
+}
+
+.vaciar-cart{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.vaciar-cart:hover{
+    background-color: blue;
+    background-color: rgb(32, 31, 31);
+}

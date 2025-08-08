@@ -1,0 +1,46 @@
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.categoria-link{
+    height: 50px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botones{
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones .categoria-link{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px 20px;
+    background-color: blue;
+    color: white;
+    width: 180px;
+    text-align: center;
+}
+
+.categoria-link:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.categoria-link:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.botones .categoria-link:hover{
+    background-color: black;
+    color: blue;
+}

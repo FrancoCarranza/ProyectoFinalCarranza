@@ -1,0 +1,94 @@
+.contactos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    margin: 40px 100px -40px 100px;
+}
+
+.titulo-contactos{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.texto-contactos{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.links-contactos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.li-contactos{
+    text-decoration: none;
+    list-style: none;
+    margin: 7px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.li-contactos strong{
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+.redes-contactos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.h3-contactos{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.red-contactos-1{
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    color: #1877f2;
+}
+
+.red-contactos-1:hover{
+    background-color: #1877f2;
+    color: white;
+}
+
+.red-contactos-2{
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    color: #E1306C;
+}
+
+.red-contactos-2:hover{
+    background-color: #E1306C;
+    color: white;
+}
+
+.red-contactos-3{
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    color: #0A66C2;
+}
+
+.red-contactos-3:hover{
+    background-color:#0A66C2;
+    color: white;
+}

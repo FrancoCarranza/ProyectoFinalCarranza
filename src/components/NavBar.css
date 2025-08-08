@@ -1,0 +1,64 @@
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #1e1e1e;
+    align-items: center;
+    padding: 0 15px;
+    height: 80px;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+.logo .logoLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.R{
+    color: blue;
+}
+
+.logo h1{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: row;
+}
+
+.navLinks li{
+    list-style: none;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 10px;
+    font-size: 19px;
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.navLinks .cart-link{
+    color: blue;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.navLinks a:hover{
+    color: blue;
+}
+
+.navLinks .cart-link:hover{
+    color: white;
+    background-color: blue;
+}

@@ -1,0 +1,26 @@
+.agregar-carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.agregar-boton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.agregar-boton:hover{
+    cursor: pointer;
+    background-color: black;
+    color: blue;
+}
