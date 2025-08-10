@@ -2,6 +2,8 @@ import { app } from '../FireBaseConfig';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useContext } from "react";
 import { CartContext } from "../providers/CartContext";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import "./VentasContainer.css";
 
 function VentasContainer({ nombre, apellido, telefono, mail, setNombre, setApellido, setTelefono, setMail }){
@@ -9,6 +11,15 @@ function VentasContainer({ nombre, apellido, telefono, mail, setNombre, setApell
     const { carrito, setCarrito } = useContext(CartContext);
 
     const handleAgregarVenta= async ()=>{
+
+        if (!nombre || !apellido || !telefono || !mail) {
+        toast.error('Por favor, completá todos los campos antes de comprar', {
+            position:'top-center',
+            autoClose:false,
+        });
+        return;
+        }
+
         const db = getFirestore(app);
         const ventasCollection = collection(db, 'ventas')
 
@@ -30,7 +41,10 @@ function VentasContainer({ nombre, apellido, telefono, mail, setNombre, setApell
         setTelefono("");
         setMail("");
 
-        alert("¡Compra realizada con éxito! Tu número de compra es: "+ docRef.id);
+        toast.success("¡Compra realizada con éxito! Tu número de compra es: "+ docRef.id, {
+            position:'top-center',
+            autoClose:false,
+        });
     }
 
     return(

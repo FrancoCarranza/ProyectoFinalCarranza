@@ -4,6 +4,8 @@ import { app } from '../FireBaseConfig';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import ItemCount from "./ItemCount";
 import AgregarAlCarrito from "./AgregarAlCarrito";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './ItemDetailContainer.css';
 
 
@@ -37,21 +39,31 @@ function ItemDetailContainer(){
     }
 
     return(
-        <div className="detalle-producto">
-            <div className="producto">
-                <img className="imagen" src={producto.imagen} alt={producto.nombre} />
-                <div className="informacion">
-                    <h2 className="producto-nombre">{producto.nombre}</h2>
-                    <p className="precio">${producto.precio}</p>
-                    <p>{producto.descripcion}</p>
-                    <p className="stock">Stock: {producto.stock} {producto.stock>1?'unidades' : 'unidad'}</p>
-                </div>
-                <div className="botones-derecha">
-                    <ItemCount cantidad={cantidad} setCantidad={setCantidad} producto={producto}/>
-                    <AgregarAlCarrito setCantidad={setCantidad} producto={producto} cantidad={cantidad}/>
+        <>
+            <div className="detalle-producto">
+                <div className="producto">
+                    <img className="imagen" src={producto.imagen} alt={producto.nombre} />
+                    <div className="informacion">
+                        <h2 className="producto-nombre">{producto.nombre}</h2>
+                        <p className="precio">${producto.precio}</p>
+                        <p>{producto.descripcion}</p>
+                        <p className="stock">Stock: {producto.stock} {producto.stock>1?'unidades' : 'unidad'}</p>
+                    </div>
+                    <div className="botones-derecha">
+                        <ItemCount cantidad={cantidad} setCantidad={setCantidad} producto={producto}/>
+                        <AgregarAlCarrito setCantidad={setCantidad} producto={producto} cantidad={cantidad}/>
+                    </div>
                 </div>
             </div>
-        </div>
+            <ToastContainer 
+                position="top-center" 
+                autoClose={3000} 
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+            />
+        </>
     )
 
 }
