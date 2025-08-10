@@ -2,12 +2,9 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { app } from '../FireBaseConfig';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
-import ItemCount from "./ItemCount";
-import AgregarAlCarrito from "./AgregarAlCarrito";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './ItemDetailContainer.css';
-
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer(){
 
@@ -40,7 +37,7 @@ function ItemDetailContainer(){
 
     return(
         <>
-            <div className="detalle-producto">
+            {/* <div className="detalle-producto">
                 <div className="producto">
                     <img className="imagen" src={producto.imagen} alt={producto.nombre} />
                     <div className="informacion">
@@ -54,7 +51,8 @@ function ItemDetailContainer(){
                         <AgregarAlCarrito setCantidad={setCantidad} producto={producto} cantidad={cantidad}/>
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <ItemDetail setCantidad={setCantidad} cantidad={cantidad} producto={producto}/>
             <ToastContainer 
                 position="top-center" 
                 autoClose={3000} 

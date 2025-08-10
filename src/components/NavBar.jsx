@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faRegistered } from '@fortawesome/free-solid-svg-icons';
+import { faRegistered } from '@fortawesome/free-solid-svg-icons';
+import CartWidget from "./CartWidget";
 import "./NavBar.css";
 
 function NavBar(){
@@ -14,10 +15,26 @@ function NavBar(){
             </div>
 
             <ul className="navLinks">
-                <li><NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Inicio</NavLink></li>
-                <li><NavLink to="/productos" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Productos</NavLink></li>
-                <li><NavLink to="/contacto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Contacto</NavLink></li>
-                <li><NavLink to="/cart" className="cart-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><FontAwesomeIcon icon={faCartShopping} size="lg"/></NavLink></li>
+                <li>
+                    <NavLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        Inicio
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/productos" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        Productos
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/contacto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        Contacto
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/cart" className="cart-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <CartWidget/>
+                    </NavLink>
+                </li>
             </ul>
         </div>
     );
