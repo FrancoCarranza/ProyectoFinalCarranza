@@ -19,6 +19,11 @@
     font-weight: 400;
 }
 
+.cargando-productos{
+    font-size: 25px;
+    font-weight: 400;
+}
+
 .product-card{
     display: flex;
     flex-direction: column;

@@ -22,6 +22,7 @@ Este proyecto es una Single Page Application (SPA) de e-commerce desarrollada co
 - Renderizados condicionales para estados de carga, carrito vacío y productos sin stock.  
 - Validaciones en el formulario de checkout para asegurar datos correctos.  
 - Apartado sencillo de contacto para comunicación con el sitio. 
+- Mostrar mensaje cargando productos o producto
 
 ## Estructura de componentes
 

@@ -11,9 +11,11 @@ function ItemDetailContainer(){
     const [producto, setProducto]=useState({})
     const [cantidad, setCantidad]=useState(1);
     const resultado=useParams();
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        handleTraerDetalle();
+        setLoading(true);
+        handleTraerDetalle().then(()=>setLoading(false));
     }, []);
 
     const handleTraerDetalle=()=>{
@@ -26,7 +28,7 @@ function ItemDetailContainer(){
 
         const elPedido = getDocs(filtro);
 
-        elPedido
+        return elPedido
             .then((respuesta)=>{
                 setProducto(respuesta.docs[0].data())
             })
@@ -37,22 +39,23 @@ function ItemDetailContainer(){
 
     return(
         <>
-            {/* <div className="detalle-producto">
-                <div className="producto">
-                    <img className="imagen" src={producto.imagen} alt={producto.nombre} />
-                    <div className="informacion">
-                        <h2 className="producto-nombre">{producto.nombre}</h2>
-                        <p className="precio">${producto.precio}</p>
-                        <p>{producto.descripcion}</p>
-                        <p className="stock">Stock: {producto.stock} {producto.stock>1?'unidades' : 'unidad'}</p>
-                    </div>
-                    <div className="botones-derecha">
-                        <ItemCount cantidad={cantidad} setCantidad={setCantidad} producto={producto}/>
-                        <AgregarAlCarrito setCantidad={setCantidad} producto={producto} cantidad={cantidad}/>
-                    </div>
-                </div>
-            </div> */}
-            <ItemDetail setCantidad={setCantidad} cantidad={cantidad} producto={producto}/>
+            {loading ? (
+                <p
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        minHeight: 'calc(100vh - 80px)',
+                        marginTop: '40px',
+                        fontSize: '25px',
+                        fontWeight: '400'
+                    }}
+                >
+                    Cargando producto...
+                </p>
+            ) : (
+                    <ItemDetail setCantidad={setCantidad} cantidad={cantidad} producto={producto}/>
+            )}
             <ToastContainer 
                 position="top-center" 
                 autoClose={3000} 
