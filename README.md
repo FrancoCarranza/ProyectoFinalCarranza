@@ -1,65 +1,65 @@
-# Proyecto Final - React Store
+# Final Project - React Store
 
-## Descripción
+## Description
 
-Este proyecto es una Single Page Application (SPA) de e-commerce desarrollada con React. Permite navegar por un catálogo de productos, ver detalles, agregar productos al carrito y realizar compras. La aplicación está conectada a Firebase Firestore, que se usa como base de datos para almacenar productos y registrar las órdenes de compra.
+This project is a Single Page Application (SPA) e-commerce developed with React. It allows you to browse a product catalog, view details, add products to the cart, and make purchases. The application is connected to Firebase Firestore, which is used as a database to store products and record purchase orders.
 
-## Tecnologías utilizadas
+## Technologies Used
 
-- React (con hooks y React Router)  
-- Firebase Firestore para base de datos en la nube  
-- Context API para manejo global del estado del carrito  
-- CSS para estilos personalizados  
-- Font Awesome para íconos  
+- React (with hooks and React Router)  
+- Firebase Firestore for cloud database  
+- Context API for global cart state management  
+- CSS for custom styles  
+- Font Awesome for icons  
 
-## Funcionalidades principales
+## Main Features
 
-- Listado dinámico de productos obtenidos desde Firestore.  
-- Vista detallada de cada producto con selección de cantidad (validada contra stock).  
-- Carrito de compras con resumen de productos, cantidades y totales.  
-- Navegación SPA entre catálogo, categorías, detalle, carrito y checkout.  
-- Registro de órdenes de compra en Firestore, mostrando al usuario el ID de la orden generada.  
-- Renderizados condicionales para estados de carga, carrito vacío y productos sin stock.  
-- Validaciones en el formulario de checkout para asegurar datos correctos.  
-- Apartado sencillo de contacto para comunicación con el sitio. 
-- Mostrar mensaje cargando productos o producto
+- Dynamic product listing fetched from Firestore.  
+- Detailed view of each product with quantity selection (validated against stock).  
+- Shopping cart with product summary, quantities, and totals.  
+- SPA navigation between catalog, categories, detail, cart, and checkout.  
+- Purchase order registration in Firestore, showing the user the generated order ID.  
+- Conditional rendering for loading states, empty cart, and out-of-stock products.  
+- Validations in the checkout form to ensure correct data.  
+- Simple contact section for communication with the site. 
+- Show loading message for products or product              
 
-## Estructura de componentes
+## Component Structure
 
 - `App`  
-- `NavBar` con `CartWidget`
+- `NavBar` with `CartWidget`
 - `Buttons` 
-- `ItemListContainer` con `Item`
-- `ItemDetailContainer` con `ItemDetail` con `ItemCount` y `NavBar`  
+- `ItemListContainer` with `Item`
+- `ItemDetailContainer` with `ItemDetail` with `ItemCount` and `NavBar`  
 - `Cart`  
 - `CheckoutForm`  
 - `Contact`
 
-## Cómo ejecutar el proyecto localmente
+## How to Run the Project Locally
 
-Sigue estos pasos para clonar, instalar y correr la aplicación en tu máquina:  
+Follow these steps to clone, install, and run the application on your machine:  
 
-1. Clonar el repositorio:
+1. Clone the repository:
     git clone https://github.com/FrancoCarranza/ProyectoFinalCarranza.git
-2. Entra a la carpeta del proyecto:
+2. Enter the project folder:
     cd ProyectoFinalCarranza
-3. Instala las dependencias:
+3. Install dependencies:
     npm install
-4. Ejecuta la aplicación en modo desarrollo:
-    npm start  o npm run dev si usás Vite 
-5. Abrir en el navegador la URL:
+4. Run the application in development mode:
+    npm start  or npm run dev if you use Vite 
+5. Open the URL in your browser:
     http://localhost:3000
 
 
-## Consideraciones finales
+## Final Considerations
 
-El proyecto respeta las buenas prácticas de React, con separación clara de componentes contenedores y de presentación. Se realizaron pruebas para asegurar que la navegación es fluida y sin recargas. Las credenciales de Firebase se manejan con variables de entorno para proteger la información sensible.
-
----
-
-Cualquier consulta o sugerencia, estoy disponible para responderla.
+The project follows React best practices, with a clear separation of container and presentation components. Tests were performed to ensure smooth navigation without reloads. Firebase credentials are managed with environment variables to protect sensitive information.
 
 ---
 
-**Autor:** Franco Carranza  
-**Fecha:** 2025  
+For any questions or suggestions, I am available to answer them.
+
+---
+
+**Author:** Franco Carranza  
+**Date:** 2025  
